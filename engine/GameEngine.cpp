@@ -8,19 +8,6 @@ using command = void (*)();
 
 bool isRunning = true;
 
-void hi(){cout<<"hi!!\n";}
-void quit(){isRunning = false;}
-
-void call(string txt){
-    map<string, command> myMap;
-    myMap["hello"] = hi;
-    myMap["quit"] = quit;
- 
-    command c = myMap[txt];
-    (*c)();
-}
-
-GameEngine::GameEngine(){}
 GameEngine::~GameEngine(){}
 
 void GameEngine::gameLoop(){
@@ -28,6 +15,6 @@ void GameEngine::gameLoop(){
     while(isRunning){
         string st;
         cin>>st;
-        call(st);
+        GameEngine::call(st);
     }
 }

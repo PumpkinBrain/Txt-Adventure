@@ -1,9 +1,17 @@
-#include "engine/Test.h"
 #include "engine/GameEngine.h"
 
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+using command = void (*)();
+
+void aaa(){cout<<"aaaaaa\n";}
+
 int main(){
-    Test test("WAAAH");
-    test.printOut();
-    GameEngine engine;
+    map<string, command> myMap;
+    myMap["a"] = aaa;
+    GameEngine engine(myMap);
     engine.gameLoop();
 }
