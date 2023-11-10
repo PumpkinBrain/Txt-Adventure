@@ -11,13 +11,14 @@ class GameEngine{
     public:
         GameEngine(map<string, command> commands) : 
             commandList(commands){};
-        ~GameEngine();
+        ~GameEngine() = default;
 
         void gameLoop();
         void call(string txt) {
             command com = commandList[txt];
             (*com)();
         }
+        map<string, command> getCommandList(){return commandList};
     private:
         map<string, command> commandList;
 };

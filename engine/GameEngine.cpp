@@ -4,11 +4,8 @@
 #include "GameEngine.h"
 
 using namespace std;
-using command = void (*)();
 
 bool isRunning = true;
-
-GameEngine::~GameEngine(){}
 
 void GameEngine::gameLoop(){
     cout<< "IM ALIVEEE\n";
