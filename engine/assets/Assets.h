@@ -11,8 +11,8 @@ class Assets{
         Player player = Player(a);
 
     private:
-        Room a = Room({"north", b}, "A room filled with dead bodies and blood", "The room");
-        Room b = Room({"south", a}, "A very long corridor. It still stinks of blood", "The corridor");
+        Room a = Room({{"north", b}}, "A room filled with dead bodies and blood", "The room");
+        Room b = Room({{"south", a}}, "A very long corridor. It still stinks of blood", "The corridor");
 
 };
     

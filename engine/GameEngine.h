@@ -18,7 +18,7 @@ class GameEngine{
             command com = commandList[txt];
             (*com)();
         }
-        map<string, command> getCommandList(){return commandList};
+        map<string, command> getCommandList(){return commandList;};
     private:
         map<string, command> commandList;
 };

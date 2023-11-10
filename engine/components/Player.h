@@ -11,15 +11,16 @@ using command = void (*)();
 
 class Player{
     public:
-        Player(Room startingRoom):
-            currentRoom(startingRoom),
+        Player(Room startingRoom) :
+            currentRoom(startingRoom)
         {};
         ~Player() = default;
         Room currentRoom;
         map<string,command> getCommands(){return commandList;};
     private:
-        map<string, command> commandList;
-        void look(){cout<<currentRoom.getDescription();}
+        map<string, command> commandList = {
+            {"look", }
+        };
 };
 
 #endif
