@@ -12,3 +12,8 @@ For now, due to my lack with familiarity with C++, I will not be using any libra
 I have created the complie.sh script to facilitate the building process, as I had trouble making a Makefile work the way I wanted and didn't want to spend too much time into that at the moment
 
 In the future, I will study makefiles a bit more in-depth and include one in the project as to make the building process as platform-agnostic as possible.
+
+
+## Current development status
+
+I'm still trying to figure out a good design for this
