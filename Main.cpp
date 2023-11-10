@@ -8,7 +8,7 @@ using namespace std;
 using command = void (*)();
 
 int main(){
-    Assets a = Assets();
-    GameEngine engine(a.player.getCommands());
+    Player player = initialize();
+    GameEngine engine(player.commandList);
     engine.gameLoop();
 }

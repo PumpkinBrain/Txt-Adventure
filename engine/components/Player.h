@@ -16,11 +16,7 @@ class Player{
         {};
         ~Player() = default;
         Room currentRoom;
-        map<string,command> getCommands(){return commandList;};
-    private:
-        map<string, command> commandList = {
-            {"look", }
-        };
+        map<string, command> commandList;
 };
 
 #endif
