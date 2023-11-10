@@ -1,6 +1,7 @@
 #ifndef Player_H
 #define Player_H
 
+#include <iostream>
 #include <string>
 #include <map>
 #include "Room.h"
@@ -10,15 +11,15 @@ using command = void (*)();
 
 class Player{
     public:
-        Player(Room startingRoom, map<string,command> commands):
+        Player(Room startingRoom):
             currentRoom(startingRoom),
-            commandList(commands)
         {};
         ~Player() = default;
-        void setCurrentRoom(Room newRoom){currentRoom = newRoom;};
+        Room currentRoom;
+        map<string,command> getCommands(){return commandList;};
     private:
-        Room currentRoom
         map<string, command> commandList;
+        void look(){cout<<currentRoom.getDescription();}
 };
 
 #endif
