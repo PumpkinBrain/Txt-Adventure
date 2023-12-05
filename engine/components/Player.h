@@ -7,7 +7,6 @@
 #include "Room.h"
 
 using namespace std;
-using command = void (*)();
 
 class Player{
     public:
@@ -16,7 +15,6 @@ class Player{
         {};
         ~Player() = default;
         Room currentRoom;
-        map<string, command> commandList;
 };
 
 #endif

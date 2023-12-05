@@ -1,14 +1,13 @@
 #include "engine/GameEngine.h"
-#include "engine/assets/Assets.h"
+#include "engine/assets/entities/PlayerCharacter.h"
 #include <iostream>
 #include <map>
 #include <string>
 
 using namespace std;
-using command = void (*)();
 
 int main(){
-    Player player = initialize();
-    GameEngine engine(player.commandList);
+    PlayerCharacter chara = PlayerCharacter();
+    GameEngine engine(chara.playerChar);
     engine.gameLoop();
 }
