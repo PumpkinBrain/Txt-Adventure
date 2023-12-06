@@ -2,6 +2,7 @@
 #define CommandRegister_H
 
 #include <map>
+#include <memory>
 #include "../../components/Command.h"
 #include "Hi.h"
 
@@ -13,7 +14,7 @@ class CommandRegister{
         ~CommandRegister(){}
 
         Hi hi = Hi();
-        map<string, Command&> commandMap = {{hi.getName(), hi}};
+        map<string, Command*> commandMap = {{hi.getName(), &hi}};        
 };
 
 #endif
