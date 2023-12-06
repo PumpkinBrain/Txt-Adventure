@@ -8,15 +8,11 @@ using namespace std;
 
 class Command {
     public:
-        Command(string name) : 
-            name(name)
-        {};
+        Command(){};
         ~Command(){};
-        virtual void execute(GameObject gameObject);
+        virtual void execute(GameObject *gameObject) = 0;
 
-        string getName(){return name;}
-    private:
-        string name;
+        virtual string getName() = 0;
 };
 
 #endif
