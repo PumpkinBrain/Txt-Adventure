@@ -12,7 +12,7 @@ class Command {
             name(name)
         {};
         ~Command(){};
-        //virtual void execute(GameObject gameObject);
+        virtual void execute(GameObject gameObject);
 
         string getName(){return name;}
     private:

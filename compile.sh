@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ -o compiled $(find . -regex '.*/.*\.\(c\|cpp\|h\)$')
+g++ -o build $(find . -regex '.*/.*\.\(c\|cpp\|h\)$')

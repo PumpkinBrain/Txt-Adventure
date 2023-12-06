@@ -6,7 +6,6 @@
 #include <string>
 #include <iostream>
 #include "GameObject.h"
-#include "Command.h"
 
 using namespace std;
 
