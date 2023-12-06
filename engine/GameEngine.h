@@ -3,7 +3,7 @@
 
 #include <string>
 #include <map>
-#include "Player.h"
+#include "./components/Player.h"
 
 using namespace std;
 

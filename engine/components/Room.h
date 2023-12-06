@@ -10,10 +10,10 @@
 
 using namespace std;
 
-class Room : GameObject{
+class Room : public GameObject{
     public:
-        Room(string description, string name, map<string, Command> commandMap): 
-            GameObject(commandMap, description, name)
+        Room(string description, string name): 
+            GameObject(description, name)
             {};
         ~Room() = default;
 };

@@ -8,7 +8,7 @@ class Rooms{
         Rooms(){}
         ~Rooms(){}
 
-        Room starterRoom = Room("you are in a dark and stinky room", "starter room", {});
+        Room starterRoom = Room("you are in a dark and stinky room", "starter room");
 };
 
 #endif

@@ -9,7 +9,7 @@ bool isRunning = true;
 
 void GameEngine::gameLoop(){
     cout<< "IM ALIVEEE\n";
-    cout<<player.currentRoom.getDescription();
+    cout<<player.currentRoom.GameObject::getDescription() + "\n";
     while(isRunning){
         string st;
         cin>>st;

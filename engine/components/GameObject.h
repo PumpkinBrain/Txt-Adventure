@@ -9,17 +9,14 @@ using namespace std;
 
 class GameObject{
     public:
-        GameObject(map<string, Command> commandMap, string description, string name) : 
-            commandMap(commandMap),
+        GameObject(string description, string name) : 
             description(description),
             name(name)
         {};
 
-        map<string, Command> getCommandMap(){return commandMap;}
-        string getDescription(){return description;}
+        virtual string getDescription(){return description;}
         string getname(){return name;}
     private:
-        map<string, Command> commandMap;
         string description;
         string name;
 };
