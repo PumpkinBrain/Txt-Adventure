@@ -8,9 +8,10 @@
 
 using namespace std;
 
-class Player{
+class Player : public GameObject {
     public:
-        Player(Room startingRoom) :
+        Player(Room startingRoom, string description, string name) : 
+            GameObject(description, name),
             currentRoom(startingRoom)
         {};
         ~Player() = default;
