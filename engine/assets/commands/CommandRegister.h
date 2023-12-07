@@ -5,6 +5,7 @@
 #include <memory>
 #include "../../components/Command.h"
 #include "Hi.h"
+#include "Check.h"
 
 using namespace std;
 
@@ -14,7 +15,9 @@ class CommandRegister{
         ~CommandRegister(){}
 
         Hi hi = Hi();
-        map<string, Command*> commandMap = {{hi.getName(), &hi}};        
+	Check check = Check();
+        map<string, Command*> commandMap = {{hi.getName(), &hi},
+					    {check.getName(), &check}};        
 };
 
 #endif

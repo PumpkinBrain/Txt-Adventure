@@ -12,7 +12,8 @@ void GameEngine::gameLoop(){
     CommandRegister cr = CommandRegister();
     cout<< "IM ALIVEEE\n";
     cout<<player.currentRoom.GameObject::getDescription() + "\n";
-    cr.commandMap["hello"]->execute(nullptr);
+    cr.commandMap["hello"] -> execute(nullptr);
+    cr.commandMap["check"] -> execute(&player);
     while(isRunning){
         string st;
         cin>>st;
