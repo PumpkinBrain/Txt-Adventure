@@ -2,19 +2,19 @@
 #include <string>
 #include <map>
 #include "GameEngine.h"
+#include "assets/commands/CommandRegister.h"
 
 using namespace std;
-using command = void (*)();
 
 bool isRunning = true;
 
-GameEngine::~GameEngine(){}
-
 void GameEngine::gameLoop(){
+    CommandRegister cr = CommandRegister();
     cout<< "IM ALIVEEE\n";
+    cout<<player.currentRoom.GameObject::getDescription() + "\n";
+    cr.commandMap["hello"]->execute(nullptr);
     while(isRunning){
         string st;
         cin>>st;
-        GameEngine::call(st);
     }
 }
