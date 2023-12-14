@@ -1,0 +1,8 @@
+{
+    "rooms" : {
+        "starter_room" : {
+            "description" : "The room smells like baked potatoes... someone might have been cooking in here",
+            "description_two" : "You see nothing new. The scent of baked potatoes \n still fills the room"
+        }
+    }
+}
