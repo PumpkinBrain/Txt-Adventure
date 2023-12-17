@@ -16,4 +16,4 @@ In the future, I will study makefiles a bit more in-depth and include one in the
 
 ## Current development status
 
-I'm still trying to figure out a good design for this
+Tried to apply the command pattern and read text from a json file, now I just have to integrate everything together and see if I overlooked anything
