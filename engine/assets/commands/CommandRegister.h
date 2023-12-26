@@ -14,10 +14,11 @@ class CommandRegister{
         CommandRegister(){}
         ~CommandRegister(){}
 
-        Hi hi = Hi();
-	Check check = Check();
         map<string, Command*> commandMap = {{hi.getName(), &hi},
-					    {check.getName(), &check}};        
+					                        {check.getName(), &check}};        
+    private:
+        Hi hi = Hi();
+	    Check check = Check();
 };
 
 #endif

@@ -10,7 +10,7 @@ class PlayerCharacter{
         ~PlayerCharacter(){}
 
         Rooms rooms = Rooms();
-        Player playerChar = Player(rooms.starterRoom, "you feel alright", "Josh");
+        Player playerChar = Player(rooms.starterRoom, "you feel alright", "Player");
 };
 
 #endif
