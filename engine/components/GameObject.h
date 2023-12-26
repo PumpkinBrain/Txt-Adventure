@@ -14,7 +14,7 @@ class GameObject{
         {};
 
         virtual string getDescription(){return description;}
-        string getName(){return name;}
+        virtual string getName(){return name;}
     private:
         string description;
         string name;

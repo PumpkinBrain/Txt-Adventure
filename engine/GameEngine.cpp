@@ -17,7 +17,7 @@ void GameEngine::gameLoop(){
     EntityRegister entityRegister = EntityRegister();
     while(isRunning){
         string input;
-        cin >> input;
+        getline(cin, input);
 
         //TODO: make substring out of input, separating into command and target
             //command will be to retrieve the command from commandRegister;

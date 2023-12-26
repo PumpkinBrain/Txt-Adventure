@@ -10,12 +10,14 @@ using namespace std;
 
 class Player : public GameObject {
     public:
-        Player(Room startingRoom, string description, string name) : 
-            GameObject(description, name),
+        Player(Room startingRoom, string description) : 
+            GameObject(description, "player"),
             currentRoom(startingRoom)
         {};
         ~Player() = default;
         Room currentRoom;
+
+        string getDescription () override {return "player";}
 };
 
 #endif

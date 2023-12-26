@@ -4,18 +4,20 @@
 #include <map>
 #include <string>
 #include "../../components/GameObject.h"
-#include "PlayerCharacter.h"
+#include "../../components/Player.h"
+#include "../rooms/Rooms.h"
 
 class EntityRegister{
     public:
-        EntityRegister();
-        ~EntityRegister();
+        EntityRegister(){};
+        ~EntityRegister(){};
 
-        map<string, GameObject*> entityMap = 
-                {{playerChar.playerChar.getName(), &playerChar.playerChar}};
+        //TODO: fix this
+        map<string, GameObject*> entityMap = {{playerCharacter.getName(), &playerCharacter}};
 
     private:
-        PlayerCharacter playerChar = PlayerCharacter();
+        Rooms rooms = Rooms();
+        Player playerCharacter = Player(rooms.starterRoom, "you feel alright");
 };
 
 #endif

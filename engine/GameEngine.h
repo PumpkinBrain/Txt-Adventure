@@ -9,11 +9,8 @@ using namespace std;
 
 class GameEngine{
     public:
-        GameEngine(Player player) : 
-            player(player)
-        {}
+        GameEngine(){};
         ~GameEngine() = default;
-        Player player;
         void gameLoop();
 };
 
