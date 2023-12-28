@@ -9,11 +9,15 @@ class Check : public Command {
 		Check() : Command(){}
 		~Check(){}
 
-		void execute(GameObject *gameObject){
-			cout << gameObject->getDescription();					
+		void execute(GameObject *gameObject) override {
+			if(gameObject != nullptr){
+				cout << gameObject->getDescription();					
+			} else {
+				cout << "please define target!\n";
+			}
 		}
 		
-		string getName(){return "check";}
+		string getName() override {return "check";}
 };
 
 #endif
