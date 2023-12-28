@@ -16,4 +16,4 @@ In the future, I will study makefiles a bit more in-depth and include one in the
 
 ## Current development status
 
-Tried to apply the command pattern and read text from a json file, now I just have to integrate everything together and see if I overlooked anything
+The commands now work close to as intended, however, in order to make further progress I'll need to refactor the classes to make everything retrieve its description from the Json file, as to avoid hard-coding game texts. Then the next step will be to redesign the linking between Player, Rooms and Items.
