@@ -10,13 +10,11 @@ using namespace std;
 
 bool isRunning = true;
 
-
-
 void GameEngine::gameLoop(){
     CommandRegister commandRegister = CommandRegister();
     EntityRegister entityRegister = EntityRegister();
     while(isRunning){
-        string input;
+        string input, command, target;
         getline(cin, input);
 
         //TODO: make substring out of input, separating into command and target
