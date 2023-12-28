@@ -15,4 +15,5 @@ map<string,string> StringSeparator::separateString(string *input){
                 break;
         }
     }
+    return stringMap;
 }

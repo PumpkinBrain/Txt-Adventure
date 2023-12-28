@@ -5,6 +5,7 @@
 #include "assets/commands/CommandRegister.h"
 #include "assets/entities/EntityRegister.h"
 #include "util/JsonHandler.h"
+#include "util/StringSeparator.h"
 
 using namespace std;
 
@@ -13,13 +14,17 @@ bool isRunning = true;
 void GameEngine::gameLoop(){
     CommandRegister commandRegister = CommandRegister();
     EntityRegister entityRegister = EntityRegister();
-    while(isRunning){
-        string input, command, target;
-        getline(cin, input);
+    StringSeparator stringSeparator = StringSeparator();
 
-        //TODO: make substring out of input, separating into command and target
-            //command will be to retrieve the command from commandRegister;
-            //target will be to retrieve GameObject from entityRegister;
-        commandRegister.commandMap[input]->execute(nullptr);
+    while(isRunning){
+        map<string, string> inputMapping;
+        getline(cin, inputMapping["input"]);
+
+        
+        //TODO: pass target from inputMapping as execute param and:
+            //make it deal with an empty string
+        inputMapping = stringSeparator.separateString(&inputMapping["input"]);
+        commandRegister.commandMap[inputMapping["command"]]->execute(nullptr);
+        cout << inputMapping["target"];
     }
 }
