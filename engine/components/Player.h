@@ -17,7 +17,7 @@ class Player : public GameObject {
         ~Player() = default;
         Room currentRoom;
 
-        string getDescription () override {return "player";}
+        string getName () override {return "player";}
 };
 
 #endif
