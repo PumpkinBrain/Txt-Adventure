@@ -17,7 +17,10 @@ class Player : public GameObject {
         ~Player() = default;
         Room currentRoom;
 
-        string getName () override {return "player";}
+        string getName() override {return "player";}
+        string getDescription() override {
+            return jsonHandler.getDescription("full_health");
+        }
 };
 
 #endif
