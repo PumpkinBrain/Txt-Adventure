@@ -12,8 +12,11 @@ class EntityRegister{
         ~EntityRegister(){};
 
         //TODO: fix this
-        map<string, GameObject*> entityMap = {{player.getName(), &player}};
+        map<string, GameObject*> entityMap;
 
+        void initializeMap(){
+            entityMap = {{player.getName(), &player}};
+        }
     private:
         Player player = Player();
 };

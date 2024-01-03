@@ -13,10 +13,6 @@ class Player : public Entity {
         string getDescription() override {
             return jsonHandler.getDescription("full_health");
         }
-
-        string getName() override {
-            return "player";
-        }
 };
 
 #endif

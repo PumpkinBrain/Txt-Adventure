@@ -11,11 +11,12 @@
 using namespace std;
 
 bool isRunning = true;
+CommandRegister commandRegister = CommandRegister();
+EntityRegister entityRegister = EntityRegister();
+StringSeparator stringSeparator = StringSeparator();
 
 void GameEngine::gameLoop(){
-    CommandRegister commandRegister = CommandRegister();
-    EntityRegister entityRegister = EntityRegister();
-    StringSeparator stringSeparator = StringSeparator();
+    entityRegister.initializeMap();
 
     while(isRunning){
         map<string, string> inputMapping;
