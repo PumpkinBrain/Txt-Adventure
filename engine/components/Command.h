@@ -10,8 +10,8 @@ class Command {
     public:
         Command(){};
         ~Command(){};
-        virtual void execute(GameObject *gameObject) = 0;
 
+        virtual void execute(GameObject *gameObject) = 0;
         virtual string getName() = 0;
 };
 

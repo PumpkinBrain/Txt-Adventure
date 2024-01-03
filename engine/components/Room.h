@@ -12,14 +12,10 @@ using namespace std;
 class Room : public GameObject{
     public:
         Room(string name): 
-            GameObject(JsonHandler("rooms", name)),
-            name(name)
+            GameObject(JsonHandler("rooms", name), name)
         {};
         ~Room() = default;
-
-        string getName() override {return name;}
     private:
-        string name;
 };
 
 #endif
