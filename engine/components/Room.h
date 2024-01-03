@@ -12,10 +12,9 @@ using namespace std;
 class Room : public GameObject{
     public:
         Room(string name): 
-            GameObject(JsonHandler("rooms", name), name)
+            GameObject(JsonHandler("rooms", name))
         {};
         ~Room() = default;
-    private:
 };
 
 #endif

@@ -9,18 +9,14 @@ using namespace std;
 
 class GameObject{
     public:
-        GameObject(JsonHandler handler, string name) : 
-            jsonHandler(handler),
-            name(name)
+        GameObject(JsonHandler handler) : 
+            jsonHandler(handler)
         {};
 
         JsonHandler jsonHandler;
 
-        virtual string getDescription(){return "a";}
-        virtual string getName() {return name;}
-
-    private:
-        string name;
+        virtual string getDescription() = 0;
+        virtual string getName() = 0;
 };
 
 #endif

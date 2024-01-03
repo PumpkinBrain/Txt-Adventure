@@ -7,7 +7,7 @@
     },
     "entities" : {
         "player" : {
-            "full_health" : "You feel nauseous and dizzy, about to throw up"
+            "full_health" : "You've never felt so great\n"
         }
     }
 }
