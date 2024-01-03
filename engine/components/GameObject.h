@@ -3,20 +3,22 @@
 
 #include <map>
 #include <string>
+#include "../util/JsonHandler.h"
 
 using namespace std;
 
 class GameObject{
     public:
-        GameObject(string description, string name) : 
-            description(description),
+        GameObject(JsonHandler handler, string name) : 
+            jsonHandler(handler),
             name(name)
         {};
 
-        virtual string getDescription(){return description;}
-        virtual string getName(){return name;}
+        JsonHandler jsonHandler;
+
+        virtual string getDescription() = 0;
+        string getName(){return name;}
     private:
-        string description;
         string name;
 };
 

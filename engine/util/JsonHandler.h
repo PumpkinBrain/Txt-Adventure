@@ -7,7 +7,16 @@ using namespace std;
 
 class JsonHandler {
     public:
-        string getDescription(string category, string name, string condition);
+        JsonHandler(string category, string name) :
+            category(category),
+            name(name)
+        {};
+        ~JsonHandler(){};
+
+        string getDescription(string condition);
+        
+    private:
+        string category, name;
 };
 
 #endif
