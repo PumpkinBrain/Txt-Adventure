@@ -4,5 +4,10 @@
             "description" : "The room smells like baked potatoes... someone might have been cooking in here",
             "description_two" : "You see nothing new. The scent of baked potatoes \n still fills the room"
         }
+    },
+    "entities" : {
+        "player" : {
+            "full_health" : "You are okay, despite everything"
+        }
     }
 }

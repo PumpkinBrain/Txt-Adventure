@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string JsonHandler::getDescription (string category, string name, string condition){
+string JsonHandler::getDescription (string condition){
     
     ifstream jsonStream ("engine/assets/descriptions.json");
     Json::Value root;
