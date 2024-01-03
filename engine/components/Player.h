@@ -10,8 +10,8 @@ using namespace std;
 
 class Player : public GameObject {
     public:
-        Player(Room startingRoom, string description) : 
-            GameObject(description, "player"),
+        Player(Room startingRoom, string name) : 
+            GameObject(JsonHandler("entities", name)),
             currentRoom(startingRoom)
         {};
         ~Player() = default;

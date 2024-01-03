@@ -17,7 +17,7 @@ class EntityRegister{
 
     private:
         Rooms rooms = Rooms();
-        Player playerCharacter = Player(rooms.starterRoom, "you feel alright");
+        Player playerCharacter = Player(rooms.starterRoom, "player");
 };
 
 #endif
