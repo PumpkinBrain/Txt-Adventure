@@ -16,4 +16,6 @@ In the future, I will study makefiles a bit more in-depth and include one in the
 
 ## Current development status
 
+Dev is going through a imposter syndrome and looking for something else to do.
+
 The commands now work close to as intended, however, in order to make further progress I'll need to refactor the classes to make everything retrieve its description from the Json file, as to avoid hard-coding game texts. Then the next step will be to redesign the linking between Player, Rooms and Items.
