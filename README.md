@@ -16,6 +16,8 @@ In the future, I will study makefiles a bit more in-depth and include one in the
 
 ## Current development status
 
-Dev is going through a imposter syndrome and looking for something else to do.
-
-The commands now work close to as intended, however, in order to make further progress I'll need to refactor the classes to make everything retrieve its description from the Json file, as to avoid hard-coding game texts. Then the next step will be to redesign the linking between Player, Rooms and Items.
+I have noticed a big flaw in the design of my code. By using a object-oriented design, creating and adding entities in the game became a logistical
+and logical nightmare, with excessive and inflexible uses of inheritance.
+Gladly, during my studies I came across Dave Churchill's game programming course, which is [available on youtube](https://www.youtube.com/watch?v=S7lXSihz0ac&list=PL_xRyXins848nDj2v-TJYahzvs-XW9sVV). In which he presents the ECS (Entity, Component, Systems) design, which proves to be far easier, flexible, and reliable
+than whatever I was doing. I shall drop this project for the time being while studying the course (it has a focus on graphic games, so I'll have to postpone my text game
+for the time being).
